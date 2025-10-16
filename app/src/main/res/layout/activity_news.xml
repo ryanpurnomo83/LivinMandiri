@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient"
+            tools:context=".NewsActivity">
+
+            <LinearLayout
+                android:id="@+id/tvmain1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:cardBackgroundColor="#FF6200EE"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="4dp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mandiri News"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTopHdl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Berita Terkini"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/tvmain1"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/menu"
+                android:layout_width="370dp"
+                android:layout_height="300dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="#ffffff"
+                app:layout_constraintTop_toBottomOf="@id/tvTopHdl"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="30dp"
+                tools:ignore="MissingConstraints">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/menuTopHdl"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardBackgroundColor="#D9D9D9"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <ImageView
+                            android:id="@+id/imgTopHeadline"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="Top headline image" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tvNewsTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="7 Kelebihan dan Kekurangan Android, Timbang-timbang sebelum membeli - CNN"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        app:layout_constraintTop_toBottomOf="@id/menuTopHdl"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp" />
+
+                    <com.mikepenz.iconics.view.IconicsImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:iiv_icon="faw_heart"
+                        app:iiv_color="@color/black"
+                        app:iiv_size="24dp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tvAllHdl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Semua Berita"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/menu"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="20dp"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tvAllNews"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvAllHdl"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                tools:listitem="@layout/list_news" />
+
+            <TextView
+                android:id="@+id/tvEmpty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tidak ada berita untuk ditampilkan"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="@id/tvAllNews"
+                app:layout_constraintBottom_toBottomOf="@id/tvAllNews"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

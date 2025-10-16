@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1d235c"
+    tools:context=".SukhaActivity">
+
+<TextView
+    android:id="@+id/lgSukha"
+    android:layout_width="200dp"
+    android:layout_height="80dp"
+    android:text="SUKHA"
+    android:textColor="#f05577"
+    android:textSize="50sp"
+    android:textStyle="italic"
+    android:textAlignment="center"
+    android:layout_marginTop="20dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/tvmain2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/lgSukha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tvTabungan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lokasi Kamu"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:padding="8dp" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tvDeposito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deposito"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:alpha="0.3"
+            android:padding="8dp"
+            />
+
+        <TextView
+            android:id="@+id/tvKartuKredit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kartu Kredit"
+            android:textSize="12sp"
+            android:textColor="#ffffff"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/searchbar"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        app:backgroundTint="#ffffff"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvmain2"
+        android:layout_marginTop="10dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/accountInfo"
+        android:layout_width="370dp"
+        android:layout_height="450dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@id/searchbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        tools:ignore="MissingConstraints"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

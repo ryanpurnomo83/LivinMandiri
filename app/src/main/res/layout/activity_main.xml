@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/tvHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        >
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="#FF6200EE"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="4dp"
+        android:layout_gravity="center"
+        tools:ignore="MissingConstraints">
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dika"
+        android:textColor="#ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dika"
+            android:textColor="#ffffff"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/accountInfo"
+        android:layout_width="370dp"
+        android:layout_height="250dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@id/tvHello"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+        <LinearLayout
+            android:id="@+id/tvmain1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvRekening"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rekening"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/tvSaldo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saldo"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:padding="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tvmain2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tvmain1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvTabungan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tabungan"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/tvDeposito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deposito"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/tvKartuKredit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kartu Kredit"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/tvPinjaman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pinjaman"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/tvInvestasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Investasi"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:padding="8dp" />
+        </LinearLayout>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="335dp"
+                android:layout_height="80dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="#ffffff"
+                app:layout_constraintTop_toBottomOf="@id/tvHello"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="10dp"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:id="@+id/tabunganNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tabungan Now IDR"
+                    android:textSize="12sp"
+                    android:textColor="#666666"
+                    android:padding="8dp" />
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/menu"
+        android:layout_width="370dp"
+        android:layout_height="250dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@+id/accountInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp">
+        <LinearLayout
+            android:id="@+id/tvmain3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvNews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="News"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:padding="8dp" />
+        </LinearLayout>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/menu2"
+        android:layout_width="370dp"
+        android:layout_height="250dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@+id/menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        tools:ignore="MissingConstraints">
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_navbar"
+        app:itemIconTint="@color/selector_nav_color"
+        app:itemTextColor="@color/selector_nav_color"
+        app:backgroundTint="@color/white" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

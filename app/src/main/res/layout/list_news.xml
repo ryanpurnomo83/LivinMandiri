@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:cardBackgroundColor="#ffffff"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true"
+    app:cardPreventCornerOverlap="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clipToOutline="true"
+        android:padding="0dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imgNewsThumb"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_margin="0dp"
+            android:background="@drawable/rounded_image_mask"
+            android:clipToOutline="true"
+            android:contentDescription="Thumbnail" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="10dp">
+
+            <TextView
+                android:id="@+id/tvNewsTitleItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Judul Berita"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/tvNewsSource"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CNN Indonesia"
+                android:textSize="12sp"
+                android:textColor="#666" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

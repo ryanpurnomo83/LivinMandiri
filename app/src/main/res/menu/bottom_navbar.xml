@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:title="Beranda"
+        android:color="#000000"/>
+
+    <item
+        android:id="@+id/nav_products"
+        android:title="Produk Anda"
+        android:color="#000000"/>
+
+    <item
+        android:id="@+id/nav_qris"
+        android:title="QRIS"
+        android:color="#000000"/>
+
+    <item
+        android:id="@+id/nav_sukha"
+        android:title="Sukha"
+        android:color="#000000"/>
+
+    <item
+        android:id="@+id/nav_loyalty"
+        android:title="Loyalty"
+        android:color="#000000"/>
+</menu>
+
+    <!--        android:icon="@drawable/ic_home"-->
+<!--    android:icon="@drawable/ic_profile"-->
+<!--    android:icon="@drawable/ic_qr_code"-->
