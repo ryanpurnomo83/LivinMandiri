@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewsActivity">
+    tools:context=".pages.NewsActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/gradient"
-            tools:context=".NewsActivity">
+            tools:context=".pages.NewsActivity">
 
             <LinearLayout
                 android:id="@+id/tvmain1"
@@ -139,7 +139,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
-                tools:listitem="@layout/list_news" />
+                tools:listitem="@layout/components_list_news" />
 
             <TextView
                 android:id="@+id/tvEmpty"

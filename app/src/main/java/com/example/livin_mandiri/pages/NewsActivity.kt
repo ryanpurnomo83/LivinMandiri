@@ -1,4 +1,4 @@
-package com.example.livin_mandiri
+package com.example.livin_mandiri.pages
 
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +9,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.livin_mandiri.adapter.NewsAdapter
+import com.example.livin_mandiri.helpers.NewsInterface
+import com.example.livin_mandiri.R
+import com.example.livin_mandiri.model.NewsResponse
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.*
@@ -23,7 +27,7 @@ class NewsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_news)
+        setContentView(R.layout.pages_activity_news)
 
         // Inisialisasi view
         tvNewsTitle = findViewById(R.id.tvNewsTitle)

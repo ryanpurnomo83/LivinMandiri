@@ -1,4 +1,4 @@
-package com.example.livin_mandiri
+package com.example.livin_mandiri.helpers
 
 class Variables {
     val url1: String = "https://newsapi.org/v2/top-headlines"

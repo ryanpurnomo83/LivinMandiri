@@ -17,16 +17,16 @@
         android:theme="@style/Theme.LivinMandiri"
         tools:targetApi="31">
         <activity
-            android:name=".NewsActivity"
+            android:name=".pages.NewsActivity"
             android:exported="false" />
         <activity
-            android:name=".SukhaActivity"
+            android:name=".pages.SukhaActivity"
             android:exported="false" />
         <activity
-            android:name=".ProductsActivity"
+            android:name=".pages.ProductsActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".pages.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,10 +34,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".QrisActivity"
+            android:name=".pages.QrisActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".pages.MainActivity"
             android:exported="false">
         </activity>
     </application>

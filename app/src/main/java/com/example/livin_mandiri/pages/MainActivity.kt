@@ -1,15 +1,16 @@
-package com.example.livin_mandiri
+package com.example.livin_mandiri.pages
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import android.widget.TextView
+import com.example.livin_mandiri.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.pages_activity_main)
         supportActionBar?.hide()
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)

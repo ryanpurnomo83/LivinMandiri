@@ -1,4 +1,4 @@
-package com.example.livin_mandiri
+package com.example.livin_mandiri.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.livin_mandiri.R
+import com.example.livin_mandiri.model.Article
 
 
 class NewsAdapter(private val articles: List<Article>) : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
@@ -19,7 +21,7 @@ class NewsAdapter(private val articles: List<Article>) : RecyclerView.Adapter<Ne
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.list_news, parent, false)
+            .inflate(R.layout.components_list_news, parent, false)
         return NewsViewHolder(view)
     }
 

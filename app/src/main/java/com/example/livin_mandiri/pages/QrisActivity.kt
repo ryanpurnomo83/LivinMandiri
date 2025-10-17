@@ -1,4 +1,4 @@
-package com.example.livin_mandiri
+package com.example.livin_mandiri.pages
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -7,11 +7,12 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.livin_mandiri.R
 
 class QrisActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_qris)
+        setContentView(R.layout.pages_activity_qris)
         checkCameraPermission()
     }
 
