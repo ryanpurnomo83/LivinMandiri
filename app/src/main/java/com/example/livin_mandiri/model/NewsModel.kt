@@ -9,6 +9,7 @@ data class Article(
     val title: String,
     val urlToImage: String?
 )
+
 {
     data class Source(
         val id: String?,

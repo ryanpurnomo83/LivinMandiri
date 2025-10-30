@@ -2,26 +2,31 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_home"
+        android:icon="@drawable/livin_feature"
         android:title="Beranda"
         android:color="#000000"/>
 
     <item
         android:id="@+id/nav_products"
+        android:icon="@drawable/product_feature"
         android:title="Produk Anda"
         android:color="#000000"/>
 
     <item
         android:id="@+id/nav_qris"
+        android:icon="@drawable/qris_logo"
         android:title="QRIS"
         android:color="#000000"/>
 
     <item
         android:id="@+id/nav_sukha"
+        android:icon="@drawable/sukha_feature"
         android:title="Sukha"
         android:color="#000000"/>
 
     <item
         android:id="@+id/nav_loyalty"
+        android:icon="@drawable/loyalty_feature"
         android:title="Loyalty"
         android:color="#000000"/>
 </menu>

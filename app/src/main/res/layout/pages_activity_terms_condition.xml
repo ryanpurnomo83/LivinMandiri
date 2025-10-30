@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pages.DebitCardSelectionActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:backgroundTint="@android:color/transparent"
+            app:tint="#004c9b"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="16dp"
+            />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Syarat Ketentuan Livin' by Mandiri"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            />
+        <TextView
+            android:id="@+id/txtP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Terima kasih telah memilih Bank Mandiri. Sekarang, mohon baca dan setuju terhadap syarat dan ketentuan"
+            android:textSize="15sp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/txtTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/dropdownHeader1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="12dp"
+        android:paddingHorizontal="25dp"
+        android:paddingVertical="20dp"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/topNav">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="25dp"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:id="@+id/txtDropdownTitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Livin' by Mandiri App Usage"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#204aff"
+                android:paddingEnd="10dp"/>
+
+            <ImageView
+                android:id="@+id/arrowIcon1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/round_keyboard_arrow_up_24"
+                app:tint="#000000"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="100dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/dropdownHeader2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="12dp"
+        android:paddingHorizontal="25dp"
+        android:paddingVertical="20dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/dropdownHeader1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="25dp"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:id="@+id/txtDropdownTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Privacy Policy"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#204aff"
+                android:paddingEnd="10dp"/>
+
+            <ImageView
+                android:id="@+id/arrowIcon2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/round_keyboard_arrow_up_24"
+                app:tint="#000000"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="100dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/dropdownHeader3"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="12dp"
+        android:paddingHorizontal="25dp"
+        android:paddingVertical="20dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/dropdownHeader2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="25dp"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:id="@+id/txtDropdownTitle3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Personal Data Processing"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#204aff"
+                android:paddingEnd="10dp"/>
+
+            <ImageView
+                android:id="@+id/arrowIcon3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/round_keyboard_arrow_up_24"
+                app:tint="#000000"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="100dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/dropdownHeader4"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="12dp"
+        android:paddingHorizontal="25dp"
+        android:paddingVertical="20dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/dropdownHeader3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="25dp"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:id="@+id/txtDropdownTitle4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Opening"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#204aff"
+                android:paddingEnd="10dp"/>
+
+            <ImageView
+                android:id="@+id/arrowIcon4"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/round_keyboard_arrow_up_24"
+                app:tint="#000000"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="100dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ScrollView
+        android:id="@+id/dropdownContent"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/dropdownHeader4"
+        android:background="#F6F6F6"
+        android:padding="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/txtRules"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:text="Peraturan akan muncul di sini..."
+            />
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAgOpAccount"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#204aff"
+        android:text="Saya Setuju"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dropdownHeader4"
+        android:layout_marginTop="50dp"
+        tools:ignore="NotSibling" />
+
+    <TextView
+        android:id="@+id/ahref"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:text="Tidak Setuju"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#204aff"
+        app:layout_constraintTop_toBottomOf="@id/btnAgOpAccount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

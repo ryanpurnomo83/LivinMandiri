@@ -6,21 +6,11 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import com.example.livin_mandiri.R
-import com.google.android.material.button.MaterialButton
 
-class CheckStatusActivity : AppCompatActivity() {
+class DebitCardSelectionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        val type = intent.getStringExtra("type")
-        val layoutRes = if(type=="login"){
-            R.layout.pages_activity_login
-        }else if(type=="register"){
-            R.layout.pages_activity_register
-        }else {
-            R.layout.pages_activity_login
-        }
-        setContentView(layoutRes)
+        setContentView(R.layout.pages_activity_debit_card_selection)
 
         val btnBack: ImageButton = findViewById(R.id.btnBack)
         btnBack.setOnClickListener {
@@ -29,7 +19,7 @@ class CheckStatusActivity : AppCompatActivity() {
 
         val btnSubmit = findViewById<Button>(R.id.btnOpAccount)
         btnSubmit.setOnClickListener {
-            val intent = Intent(this, DebitCardSelectionActivity::class.java)
+            val intent = Intent(this, TermsConditionActivity::class.java)
             startActivity(intent)
             finish() // opsional: menutup activity sekarang supaya tidak bisa kembali dengan tombol back
         }

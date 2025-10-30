@@ -4,12 +4,13 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
 
     <application
         android:allowBackup="true"
@@ -21,10 +22,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LivinMandiri"
         tools:targetApi="31">
+        <activity
+            android:name=".pages.AuthenticationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pages.VerificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pages.LoyaltyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pages.TermsConditionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pages.DebitCardSelectionActivity"
+            android:exported="false" />
+
         <receiver
             android:name=".helpers.Notification"
-            android:enabled="true"
-            />
+            android:enabled="true" />
+
         <activity
             android:name=".pages.WelcomeActivity"
             android:exported="false" />
