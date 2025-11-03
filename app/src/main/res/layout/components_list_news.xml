@@ -46,14 +46,28 @@
                 android:textStyle="bold"
                 android:textSize="14sp"
                 android:textColor="#000" />
-
-            <TextView
-                android:id="@+id/tvNewsSource"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CNN Indonesia"
-                android:textSize="12sp"
-                android:textColor="#666" />
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp">
+                <TextView
+                    android:id="@+id/tvNewsSource"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CNN Indonesia"
+                    android:textSize="12sp"
+                    android:textColor="#666" />
+                <TextView
+                    android:id="@+id/tvNewsRlsDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 Jan 2025"
+                    android:textSize="12sp"
+                    android:textColor="#666"
+                    android:layout_marginLeft="15dp"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

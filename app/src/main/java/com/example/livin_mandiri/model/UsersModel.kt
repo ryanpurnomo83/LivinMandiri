@@ -1,6 +1,6 @@
 package com.example.livin_mandiri.model
 
-data class Users (
+data class UsersModel (
     val id: Int = 0,
     val name: String,
     val phoneNum: String,

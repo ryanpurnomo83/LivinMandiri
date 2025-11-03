@@ -15,7 +15,8 @@ class ProductsActivity : AppCompatActivity() {
         bottomNav.setOnItemSelectedListener{item ->
             when (item.itemId) {
                 R.id.nav_home -> {
-                    // Sudah di halaman utama, tidak perlu apa-apa
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
                     true
                 }
                 R.id.nav_products -> {

@@ -29,13 +29,11 @@ class NewsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pages_activity_news)
 
-        // Inisialisasi view
         tvNewsTitle = findViewById(R.id.tvNewsTitle)
         imgTopHeadline = findViewById(R.id.imgTopHeadline)
         recyclerView = findViewById(R.id.tvAllNews)
         tvEmpty = findViewById(R.id.tvEmpty)
 
-        // Logging Interceptor
         val logging = HttpLoggingInterceptor().apply {
             level = HttpLoggingInterceptor.Level.BODY
         }
@@ -44,7 +42,6 @@ class NewsActivity : AppCompatActivity() {
             .addInterceptor(logging)
             .build()
 
-        // Retrofit setup
         val retrofit = Retrofit.Builder()
             .baseUrl("https://newsapi.org/")
             .addConverterFactory(GsonConverterFactory.create())
@@ -53,7 +50,6 @@ class NewsActivity : AppCompatActivity() {
 
         val api = retrofit.create(NewsInterface::class.java)
 
-        // Panggil API top headlines untuk Indonesia
         api.getTopHeadlines("us", NewsInterface.API_KEY)
             .enqueue(object : Callback<NewsResponse> {
                 override fun onResponse(call: Call<NewsResponse>, response: Response<NewsResponse>) {
@@ -65,7 +61,6 @@ class NewsActivity : AppCompatActivity() {
                         if (articles.isNotEmpty()) {
                             tvEmpty.visibility = View.GONE
 
-                            // Tampilkan headline utama
                             val firstArticle = articles[0]
                             tvNewsTitle.text = firstArticle.title
                             Glide.with(this@NewsActivity)

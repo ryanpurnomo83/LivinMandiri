@@ -5,7 +5,7 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import com.example.livin_mandiri.model.Users
+import com.example.livin_mandiri.model.UsersModel
 
 class SQLiteHelper(context: Context) :
     SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
@@ -36,7 +36,7 @@ class SQLiteHelper(context: Context) :
     }
 
     // 👉 Insert user baru
-    fun insertUser(user: Users): Long {
+    fun insertUser(user: UsersModel): Long {
         val db = writableDatabase
         val values = ContentValues().apply {
             put(KEY_NAME, user.name)
@@ -49,15 +49,15 @@ class SQLiteHelper(context: Context) :
     }
 
     // 👉 Ambil semua user
-    fun getAllUser(): List<Users> {
-        val userList = mutableListOf<Users>()
+    fun getAllUser(): List<UsersModel> {
+        val userList = mutableListOf<UsersModel>()
         val selectQuery = "SELECT * FROM $TABLE_USER"
         val db = readableDatabase
         val cursor: Cursor = db.rawQuery(selectQuery, null)
 
         if (cursor.moveToFirst()) {
             do {
-                val user = Users(
+                val user = UsersModel(
                     id = cursor.getInt(cursor.getColumnIndexOrThrow(KEY_ID)),
                     name = cursor.getString(cursor.getColumnIndexOrThrow(KEY_NAME)),
                     phoneNum = cursor.getString(cursor.getColumnIndexOrThrow(KEY_PHONE_NUM)),
@@ -73,7 +73,7 @@ class SQLiteHelper(context: Context) :
     }
 
     // 👉 Cek login berdasarkan email (optional)
-    fun getUserByEmail(email: String): Users? {
+    fun getUserByEmail(email: String): UsersModel? {
         val db = readableDatabase
         val cursor = db.query(
             TABLE_USER,
@@ -83,9 +83,9 @@ class SQLiteHelper(context: Context) :
             null, null, null
         )
 
-        var user: Users? = null
+        var user: UsersModel? = null
         if (cursor.moveToFirst()) {
-            user = Users(
+            user = UsersModel(
                 id = cursor.getInt(cursor.getColumnIndexOrThrow(KEY_ID)),
                 name = cursor.getString(cursor.getColumnIndexOrThrow(KEY_NAME)),
                 phoneNum = cursor.getString(cursor.getColumnIndexOrThrow(KEY_PHONE_NUM)),

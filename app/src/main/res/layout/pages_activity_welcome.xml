@@ -58,7 +58,7 @@
         android:id="@+id/btnHaveAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sudah Punya Rekening Mandiri"
+        android:text="Punya Kartu Debit/Kredit Mandiri"
         android:textColor="#004c9b"
         android:backgroundTint="#FFFFFF"
         app:strokeColor="#004c9b"

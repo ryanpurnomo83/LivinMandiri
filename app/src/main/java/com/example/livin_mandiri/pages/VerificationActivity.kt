@@ -12,10 +12,14 @@ import com.example.livin_mandiri.R
 import com.example.livin_mandiri.model.CountryCodeModel
 import com.example.livin_mandiri.helpers.CountryCodeInterface
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.textfield.TextInputEditText
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class VerificationActivity : AppCompatActivity() {
 
@@ -25,8 +29,13 @@ class VerificationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pages_activity_verification)
 
-        inputText1a = findViewById(R.id.inputText1a)
+        val etBirthDate = findViewById<TextInputEditText>(R.id.etBirthDate)
+        etBirthDate.setOnClickListener {
+            BirthDate(etBirthDate)
+        }
 
+
+        inputText1a = findViewById(R.id.inputText1a)
         inputText1a.setOnClickListener {
             fetchCountryCodes()
         }
@@ -41,6 +50,23 @@ class VerificationActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish() // opsional: menutup activity sekarang supaya tidak bisa kembali dengan tombol back
+        }
+    }
+
+    private fun BirthDate(etBirthDate: TextInputEditText){
+        // 🗓️ Buat DatePicker dari Material
+        val datePicker =
+            MaterialDatePicker.Builder.datePicker()
+                .setTitleText("Pilih tanggal lahir")
+                .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
+                .build()
+
+        datePicker.show(supportFragmentManager, "DATE_PICKER")
+
+        datePicker.addOnPositiveButtonClickListener { selectedDate ->
+            val formatter = SimpleDateFormat("dd MMM yyyy", Locale("id", "ID"))
+            val dateString = formatter.format(Date(selectedDate))
+            etBirthDate.setText(dateString)
         }
     }
 

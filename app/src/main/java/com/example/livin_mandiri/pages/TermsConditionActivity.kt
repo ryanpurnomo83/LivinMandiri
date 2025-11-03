@@ -13,13 +13,13 @@ class TermsConditionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pages_activity_terms_condition)
 
-        val btnBack: ImageButton = findViewById(R.id.btnBack)
-        btnBack.setOnClickListener {
+        val btnBack = findViewById<ImageButton?>(R.id.btnBack)
+        btnBack?.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
         }
 
-        val btnSubmit = findViewById<MaterialButton>(R.id.btnAgOpAccount)
-        btnSubmit.setOnClickListener {
+        val btnSubmit = findViewById<MaterialButton?>(R.id.btnAgOpAccount)
+        btnSubmit?.setOnClickListener {
             val intent = Intent(this, VerificationActivity::class.java)
             startActivity(intent)
             finish() // opsional: menutup activity sekarang supaya tidak bisa kembali dengan tombol back
